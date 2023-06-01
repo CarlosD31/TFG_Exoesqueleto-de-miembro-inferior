@@ -1,0 +1,20 @@
+# urdf_controller:
+# Publish all joint states -----------------------------------
+ortesis_joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+ 
+# Position Controllers --------------------------------------
+pier_dch_controller:
+  type: "position_controllers/JointGroupPositionController"
+  joints:
+    - Mov_Cadera_dch
+    - Mov_Rodilla_dch
+    - Mov_Tobillo_dch
+
+pier_izq_controller:
+  type: "position_controllers/JointGroupPositionController"
+  joints:
+    - Mov_Cadera_izq
+    - Mov_Rodilla_izq
+    - Mov_Tobillo_izq
